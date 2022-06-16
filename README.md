@@ -17,4 +17,6 @@ npm start
 
 ## Demo
 
+Live: https://simoneteglia.github.io/Interactive-gradient/
+
 ![Demo](demo-gif.gif)
