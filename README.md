@@ -19,4 +19,4 @@ npm start
 
 Live: https://simoneteglia.github.io/Interactive-gradient/
 
-![Demo](demo-gif.webm)
+![Demo](demo-gif.gif)
