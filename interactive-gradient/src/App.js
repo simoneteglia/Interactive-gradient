@@ -4,6 +4,7 @@ function App() {
   const [distanceX, setDistanceX] = useState(50);
   const [centerX, setCenterX] = useState(50);
   const [centerY, setCenterY] = useState(50);
+  const [textFlag, setTextFlag] = useState(true);
 
   useEffect(() => {
     document.addEventListener("mousemove", (e) => {
@@ -26,13 +27,14 @@ function App() {
         height: "100vh",
         width: "100vw",
 
-        fontSize: "200px",
+        fontSize: textFlag ? "200px" : "100px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        backgroundClip: "text",
-        WebkitBackgroundClip: "text",
-        color: "transparent",
+
+        backgroundClip: textFlag ? "text" : "initial",
+        WebkitBackgroundClip: textFlag ? "text" : "initial",
+        color: textFlag ? "transparent" : "white",
 
         background: `radial-gradient(ellipse at ${centerX * 0.8}% ${
           centerY * 0.8
@@ -42,7 +44,9 @@ function App() {
           #f35 0%, #43e 100%)`,
       }}
     >
-      <h1>TEXT</h1>
+      <h1 style={{ cursor: "pointer" }} onClick={() => setTextFlag(!textFlag)}>
+        {textFlag ? "TEXT" : "BACKGROUND"}
+      </h1>
     </div>
   );
 }
