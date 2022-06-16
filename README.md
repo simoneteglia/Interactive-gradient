@@ -14,3 +14,7 @@ npm install
 npm start
 
 ```
+
+## Demo
+
+![Demo](demo-gif.gif)
